@@ -1,0 +1,31 @@
+@import "../../../../../colors";
+:host {
+	overflow-y: auto;
+}
+.list-item {
+	display: block;
+	padding: 8px;
+	cursor: pointer;
+	border: 1px solid black;
+	border-bottom: 0;
+	height: 20px;
+	min-height: 20px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	&:hover {
+		color: white;
+		background-color: $color-primary-light;
+	}
+	&:last-child {
+		border-bottom: 1px solid black;
+	}
+	&.selected {
+		color: white;
+		background-color: $color-primary;
+		height: auto;
+		white-space: initial;
+		overflow: initial;
+		text-overflow: initial;
+	}
+}

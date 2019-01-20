@@ -1,0 +1,4 @@
+<form action="">
+	<input type="text" [(ngModel)]="keywords" [ngModelOptions]="{standalone: true}" [placeholder]="placeholder">
+	<button type="submit" [disabled]="disabled" (click)="sendSearch()">Search</button>
+</form>

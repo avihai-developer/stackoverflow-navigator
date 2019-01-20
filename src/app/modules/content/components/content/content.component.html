@@ -1,0 +1,7 @@
+<div class="content-item" *ngFor="let item of content">
+	<span class="title">{{item.title}}</span>
+	<span class="value" [ngSwitch]="item.type">
+		<a *ngSwitchCase="ContentTypes.LINK" [href]="item.value" target="_blank">{{item.value}}</a>
+		<span *ngSwitchDefault>{{item.value}}</span>
+  </span>
+</div>

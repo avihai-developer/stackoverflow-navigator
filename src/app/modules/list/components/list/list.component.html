@@ -1,0 +1,8 @@
+<div class="list-item"
+	 [ngClass]="{'selected': i === selectedItemIndex}"
+	 *ngFor="let item of list; let i = index"
+	 [attr.data-index]="i"
+	 (click)="selectItem(i)"
+	 [title]="item"
+	 [innerHTML]="item">
+</div>

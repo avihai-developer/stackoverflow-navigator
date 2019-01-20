@@ -1,0 +1,23 @@
+@import "../../../../../colors";
+:host {
+	display: flex;
+	form {
+		display: flex;
+		flex: 1;
+		input {
+			flex: 1;
+			padding: 16px;
+		}
+		button {
+			color: white;
+			background-color: $color-accent;
+			border: 0;
+			padding: 16px;
+			cursor: pointer;
+			font-weight: bold;
+			&:hover {
+				background-color: $color-accent-light;
+			}
+		}
+	}
+}

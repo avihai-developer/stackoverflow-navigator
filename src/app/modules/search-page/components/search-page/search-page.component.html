@@ -1,0 +1,23 @@
+<app-page-title [title]="pageTitle">
+</app-page-title>
+<app-search
+		[placeholder]="searchPlaceholder"
+		(search)="startSearch($event)"
+		[disabled]="search?.stage === SearchStages.InProgress">
+</app-search>
+<div class="loading" [hidden]="search?.stage !== SearchStages.InProgress">
+	Loading...
+</div>
+<div class="no-results" [hidden]="search?.stage !== SearchStages.NoResults">
+	No results
+</div>
+<div class="error" [hidden]="search?.stage !== SearchStages.Error">
+	Network error please try again later.
+</div>
+<div class="results-container" [hidden]="search?.stage !== SearchStages.Success">
+	<app-list [list]="questionsArray"
+			  (selectedIndex)="selectQuestion($event)">
+	</app-list>
+	<app-content [content]="selectedQuestionContent">
+	</app-content>
+</div>
